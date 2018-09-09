@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista zadań</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+
+    <h1>Hometasker</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Osoba</td>
+            <td>Opis</td>
+            <td>Punkty</td>
+            <td>Termin wykonania</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person: ${persons}">
+            <td th:text="${person.personName}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
